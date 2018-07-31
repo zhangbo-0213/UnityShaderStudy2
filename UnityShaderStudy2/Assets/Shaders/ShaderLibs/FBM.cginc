@@ -6,10 +6,10 @@ float Noise_Self(float2 p){
 	return Noise(p*8.0);
 }
 
-//叠加5层，并把初始化采样距离设置为4，可以自定义。这种噪声可以用来模拟石头、山脉这类物体。
+//叠加5层，并把初始化采样距离设置为7，可以自定义。这种噪声可以用来模拟石头、山脉这类物体。
 float Noise_Sum(float2 p){
 	float f=0.0;
-	p=p*4.0;
+	p=p*7.0;
 	f+=1.0000*Noise(p);p=2.0*p;
 	f+=0.5000*Noise(p);p=2.0*p;
 	f+=0.2500*Noise(p);p=2.0*p;
@@ -51,10 +51,10 @@ float Noise_Self(float3 p){
 	return Noise(p*8.0);
 }
 
-//叠加5层，并把初始化采样距离设置为4，可以自定义。这种噪声可以用来模拟石头、山脉这类物体。
+//叠加5层，并把初始化采样距离设置为7，可以自定义。这种噪声可以用来模拟石头、山脉这类物体。
 float Noise_Sum(float3 p){
 	float f=0.0;
-	p=p*4.0;
+	p=p*7.0;
 	f+=1.0000*Noise(p);p=2.0*p;
 	f+=0.5000*Noise(p);p=2.0*p;
 	f+=0.2500*Noise(p);p=2.0*p;

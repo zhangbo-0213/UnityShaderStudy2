@@ -15,7 +15,7 @@ sampler2D _NoiseTex;
 	#define Noise PNoise
 #endif
 //Perlin_Noise
-float PNoise(in float2 p){
+float PNoise(float2 p){
 	float2 i=floor(p);
 	float2 f=frac(p);
 
@@ -29,7 +29,7 @@ float PNoise(in float2 p){
 							   dot(Hash22(i+float2(1.0,1.0)),f-float2(1.0,1.0)),w.x),w.y);
 }
 
-float PNoise(in float3 p){
+float PNoise(float3 p){
 	float3 i=floor(p);
 	float3 f=frac(p);
 
@@ -46,7 +46,7 @@ float PNoise(in float3 p){
 }
 
 //Value_Noise 
-float VNoise(in float2 p){
+float VNoise(float2 p){
 	float2 i=floor(p);
 	float2 f=frac(p);
 	//缓和曲线，计算插值点
@@ -56,7 +56,7 @@ float VNoise(in float2 p){
 					  lerp(Hash21(i+float2(0.0,1.0)),Hash21(i+float2(1.0,1.0)),w.x),w.y);
 }
 
-float VNoise(in float3 p){
+float VNoise(float3 p){
 	float3 i=floor(p);
 	float3 f=frac(p);
 	//缓和曲线，计算插值点
