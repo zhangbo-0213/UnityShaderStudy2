@@ -17,6 +17,13 @@
 			#define USING_PERLIN_NOISE
 			#include "ShaderLibs/FrameWork2D.cginc"
 
+			float2 Gradn(float2 p){
+				float ep=0.09;
+				float gradx=Noise(float2(p.x+ep,p.y))-Noise(float2(p.x-ep,p.y));
+				float grady=Noise(float2(p.x,p.y+ep))-Noise(float2(p.x,p.y-ep));
+				return float2(gradx,grady);
+			}
+
 			#define DrawInGrid(uv,DRAW_FUNC)\
 			{\
 				float2 pfloor=floor(uv);\
@@ -31,6 +38,8 @@
 			}\
 
 			fixed4 _Color;
+
+			
 
 			//绘制格子线
 			float3 DrawGridLine(float2 uv){
