@@ -20,7 +20,9 @@ float PNoise(float2 p){
 	float2 f=frac(p);
 
 	//缓和曲线，计算权重
-	float2 w=f*f*(3.0-2.0*f);
+	//float2 w=f*f*(3.0-2.0*f);
+	//二阶导连续缓和曲线
+	float2 w=f*f*f*(6*f*f-15*f+10);
 
 	//使用权重值计算插值
 	return lerp( lerp(dot(Hash22(i+float2(0.0,0.0)),f-float2(0.0,0.0)),
@@ -33,7 +35,9 @@ float PNoise(float3 p){
 	float3 i=floor(p);
 	float3 f=frac(p);
 
-	float3 w=f*f*(3.0-2.0*f);
+	//float3 w=f*f*(3.0-2.0*f);
+	//二阶导连续缓和曲线
+	float3 w=f*f*f*(6*f*f-15*f+10);
 
 	return lerp(lerp(lerp(dot(Hash33(i+float3(0.0,0.0,0.0)),f-float3(0.0,0.0,0.0)),
 									 dot(Hash33(i+float3(1.0,0.0,0.0)),f-float3(1.0,0.0,0.0)),w.x),

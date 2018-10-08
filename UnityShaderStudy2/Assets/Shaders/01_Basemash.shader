@@ -86,7 +86,7 @@
 			};
 
 			float3 DrawFBM(float2 uv){
-				uv*=4;
+				uv*=16;
 				float val=(Noise_Sum(uv)+1.0)*0.5;
 				return float3(val,val,val);
 			}
