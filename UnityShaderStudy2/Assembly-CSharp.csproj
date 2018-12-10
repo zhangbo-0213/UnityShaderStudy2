@@ -59,8 +59,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\SetCameraDepthMode.cs" />
-    <Compile Include="Assets\Scripts\TargetScripts.cs" />
+    <Compile Include="Assets\Scripts\AimedToTarget\SetCameraDepthMode.cs" />
+    <Compile Include="Assets\Scripts\AimedToTarget\TargetScripts.cs" />
+    <Compile Include="Assets\Scripts\Common\MouseViewControl.cs" />
+    <Compile Include="Assets\Scripts\ToonCharacterControl\ActionController.cs" />
     <None Include="Assets\Shaders\Normal_Parallax_Relief\002_parallax.shader" />
     <None Include="Assets\Shaders\07_RayMarchingSimple.shader" />
     <None Include="Assets\Shaders\Other\ForceField.shader" />
@@ -74,6 +76,7 @@
     <None Include="Assets\Shaders\ShaderLibs\Hash.cginc" />
     <None Include="Assets\Shaders\Other\AimedToTarget.shader" />
     <None Include="Assets\Shaders\01_Basemash.shader" />
+    <None Include="Assets\Shaders\ToonShader\ToonShader.shader" />
     <None Include="Assets\Shaders\03_CloudSea.shader" />
     <None Include="Assets\Shaders\Other\HoloGram.shader" />
     <None Include="Assets\Shaders\02_Noise.shader" />

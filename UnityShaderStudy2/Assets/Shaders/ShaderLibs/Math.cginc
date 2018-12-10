@@ -8,7 +8,7 @@ float Remap(float oa,float ob,float na,float nb,float val){
 }
 
 float2x2 Rot2D(float a){
-	a*=Radius2Deg;
+	a*=Deg2Radius;
 	float sa=sin(a);
 	float ca=cos(a);
 	return float2x2(ca,-sa,sa,ca);

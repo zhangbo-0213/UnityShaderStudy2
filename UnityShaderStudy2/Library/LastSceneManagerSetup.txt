@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/004_AimedToTarget.unity
+- path: Assets/Scenes/07_RayMarchingSimple.unity
   isLoaded: 1
   isActive: 1
