@@ -1,4 +1,6 @@
 //·ÖÐÎÔëÉù
+#ifndef FBM
+#define FBM
 
 #include "Noise.cginc"
 
@@ -91,3 +93,5 @@ float Noise_Sum_Abs_Sin(float3 p){
 
 	return f;
 }
+
+#endif

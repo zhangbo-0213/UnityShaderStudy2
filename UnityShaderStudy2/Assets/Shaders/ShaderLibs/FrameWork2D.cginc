@@ -1,3 +1,6 @@
+#ifndef FRAMEWORK2D
+#define FRAMEWORK2D
+
 #include "UnityCG.cginc"
 #include "FBM.cginc"
 
@@ -27,3 +30,5 @@ float3 ProcessFrag(float2 uv);
 float4 frag(v2f i):SV_Target{
 	return float4(ProcessFrag(i.uv),1.0);
 }
+
+#endif

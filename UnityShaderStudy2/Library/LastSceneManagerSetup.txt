@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/07_RayMarchingSimple.unity
+- path: Assets/Scenes/15_MountainLake.unity
   isLoaded: 1
   isActive: 1

@@ -1,4 +1,7 @@
 //Hash 随机函数
+#ifndef HASH
+#define HASH
+
 #include "Math.cginc"
 
 //https://www.shadertoy.com/view/4ssXRX   一些指定分布的Hash
@@ -98,3 +101,5 @@ float4 Hash44(float4 p4){
 	p4+=dot(p4,p4.wzxy+19.19);
 	return frac((p4.xxyz+p4.yzzw)*p4.zywx);
 }
+
+#endif
